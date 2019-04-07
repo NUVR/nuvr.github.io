@@ -47,9 +47,7 @@ jobs:
           name: Deploy files to GitHub
           command: |
               # Set Git username if not already set
-              if [ ! git config --list | grep -q user.name ]; then
-                  git config user.name "CircleCI"
-              fi
+              ./set_git_username.sh
 
               git add .
               git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
