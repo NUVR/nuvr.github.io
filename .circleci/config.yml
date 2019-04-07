@@ -46,10 +46,9 @@ jobs:
       - run:
           name: Deploy files to GitHub
           command: |
-              # Set Git username if not already set
-              ./set_git_username.sh
+            # Set Git username if not already set
+            ./set_git_username.sh
 
-              git add .
-              git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
-              git push git@github.com:NUVR/nuvr.github.io.git master
-            fi
+            git add .
+            git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
+            git push git@github.com:NUVR/nuvr.github.io.git master
