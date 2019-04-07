@@ -61,6 +61,7 @@ jobs:
 
             ls -la
 
-            git add *
+            git add .
+            git status
             git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
             git push git@github.com:NUVR/nuvr.github.io.git master
