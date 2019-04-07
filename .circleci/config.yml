@@ -55,6 +55,7 @@ jobs:
           command: |
             # Set Git username if not already set
             if [ ! "(git config --list | grep -q user.name)" ]; then
+                echo "Setting username"
                 git config --global user.name "CircleCI"
                 git config --global user.email "circleci@nuvr.io"
             fi
