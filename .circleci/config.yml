@@ -59,4 +59,4 @@ jobs:
             git add .
             git status
             git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
-            git push -u origin HEAD:master
+            git push -u origin HEAD:master --force
