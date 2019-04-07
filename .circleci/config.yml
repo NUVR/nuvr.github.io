@@ -59,6 +59,8 @@ jobs:
                 git config --global user.email "circleci@nuvr.io"
             fi
 
-            git add .
+            ls -la
+
+            git add *
             git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
             git push git@github.com:NUVR/nuvr.github.io.git master
