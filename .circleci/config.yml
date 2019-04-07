@@ -59,7 +59,8 @@ jobs:
                 git config --global user.email "circleci@nuvr.io"
             fi
 
-            ls -la
+            git config --list
+            git config --list | grep user.name
 
             git add .
             git status
