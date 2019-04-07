@@ -53,10 +53,8 @@ jobs:
       - run:
           name: Deploy files to GitHub
           command: |
-            # Set Git username if not already set
-            if [ ! "(git config --list | grep -q user.name)" ]; then echo "Setting username"; fi
-            # git config --global user.name "CircleCI"
-            # git config --global user.email "circleci@nuvr.io"
+            git config --global user.name "CircleCI"
+            git config --global user.email "circleci@nuvr.io"
 
             git add .
             git status
