@@ -39,6 +39,7 @@ jobs:
             # Only deploy from master branch
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               yarn deploy
+              git config user.name "CircleCI"
               git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
-              git push origin master
+              git push -q https://${GITHUB_CIRCLECI_TOKEN}@github.com/NUVR/nuvr.github.io.git master
             fi
