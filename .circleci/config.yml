@@ -58,9 +58,6 @@ jobs:
             # git config --global user.name "CircleCI"
             # git config --global user.email "circleci@nuvr.io"
 
-            git config --list
-            git config --list | grep user.name
-
             git add .
             git status
             git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
