@@ -10,7 +10,7 @@ jobs:
 
     branches:
       only:
-        - master
+        - dev
 
     working_directory: ~/repo
 
