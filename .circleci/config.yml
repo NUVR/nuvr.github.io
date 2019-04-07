@@ -15,6 +15,10 @@ jobs:
     working_directory: ~/repo
 
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "95:40:ac:cd:b4:2e:84:17:df:34:66:bb:f8:3b:d5:f9"
+
       - checkout
 
       - restore_cache:
@@ -51,7 +55,8 @@ jobs:
           command: |
             # Set Git username if not already set
             if [ ! "(git config --list | grep -q user.name)" ]; then
-                git config user.name "CircleCI"
+                git config --global user.name "CircleCI"
+                git config --global user.email "circleci@nuvr.io"
             fi
 
             git add .
