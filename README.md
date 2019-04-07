@@ -1,6 +1,6 @@
 # NUVR/OrgSync Website
 
-This repository is designed to contain all of the code for our https://nuvr.github.io/ website in plain HTML form. While it can be added to OrgSync
+This repository is designed to contain all of the code for our https://nuvr.github.io/ website in plain HTML form. While it can be added to OrgSync, these jade templates have to be split into individual files for uploading.
 
 ## Contributing
 
