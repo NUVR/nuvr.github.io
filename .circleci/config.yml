@@ -34,13 +34,24 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-          name: Deploy files to index.html
+          name: Remove old builds
           command: |
-            # Only deploy from master branch
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              yarn deploy
-              git config user.name "CircleCI"
+            rm -rf assets/ styles/
+            rm index.html
+
+      - run:
+          name: Build files
+          command: yarn deploy
+
+      - run:
+          name: Deploy files to GitHub
+          command: |
+              # Set Git username if not already set
+              if [ ! git config --list | grep -q user.name ]; then
+                  git config user.name "CircleCI"
+              fi
+
               git add .
               git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
-              git push -q https://${GITHUB_CIRCLECI_TOKEN}@github.com/NUVR/nuvr.github.io.git master
+              git push git@github.com:NUVR/nuvr.github.io.git master
             fi
