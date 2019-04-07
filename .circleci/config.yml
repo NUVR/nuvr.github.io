@@ -38,7 +38,9 @@ jobs:
           command: |
             rm -rf assets/ styles/
             # Ignore errors if doesn't exist
-            [ -e index.html ] && rm index.html
+            if [ -e index.html ]; then
+                rm index.html
+            fi
 
       - run:
           name: Build files
