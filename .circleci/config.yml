@@ -59,4 +59,4 @@ jobs:
             git add .
             git status
             git commit -m "Update site (`date '+%F %T %Z'`) [ci skip]" || true
-            git push git@github.com:NUVR/nuvr.github.io.git origin master
+            git push git@github.com:NUVR/nuvr.github.io.git origin master --force
