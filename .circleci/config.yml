@@ -37,7 +37,8 @@ jobs:
           name: Remove old builds
           command: |
             rm -rf assets/ styles/
-            rm index.html
+            # Ignore errors if doesn't exist
+            rm index.html 2> /dev/null
 
       - run:
           name: Build files
