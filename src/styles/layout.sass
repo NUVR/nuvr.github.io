@@ -18,6 +18,7 @@
 #container
   background: $white
   margin-top: -$container-overlap
+  overflow: hidden
 
 .content
   max-width: $content-width
@@ -27,11 +28,15 @@
 .grid-container
   display: grid
 
+  p
+    font-size: 18px
+
   &.grid-2
     grid-template-columns: auto auto
 
   .grid-item
     padding: $container-padding
+    position: relative
 
 .m-left-10
   margin-left: 10px
