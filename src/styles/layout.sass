@@ -19,6 +19,16 @@
   background: $white
   margin-top: -$container-overlap
   overflow: hidden
+  box-shadow: 0px 5px 10px #999999
+
+#logos
+  display: grid
+  padding: 32px
+  grid-template-columns: repeat(4, 1fr)
+  grid-column-gap: 64px
+
+  img
+    width: 100%
 
 .content
   max-width: $content-width
@@ -34,9 +44,15 @@
   &.grid-2
     grid-template-columns: auto auto
 
+  &.grid-3
+    grid-template-columns: auto auto auto
+
   .grid-item
     padding: $container-padding
     position: relative
+
+    img
+      width: 100%
 
 .m-left-10
   margin-left: 10px
