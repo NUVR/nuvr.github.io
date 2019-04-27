@@ -15,14 +15,12 @@ body
   font-size: 84px
   margin-bottom: 0
 
-h2.title
-  font-size: 60px
-
 .subtitle
   font-weight: normal
   font-size: 24px
 
 p
+  font-size: 18px
   line-height: 1.5
 
 ::selection
@@ -30,7 +28,8 @@ p
   color: $white
 
 a
-  color: inherit
+  color: $gradient-start
+  font-weight: bold
 
 .hololens
   width: 120% !important
@@ -41,7 +40,10 @@ a
   margin-right: -$container-padding
   color: $white
   padding: $container-padding
-  margin-bottom: $container-padding
+  margin-bottom: -$container-padding
+
+  .title
+    font-size: 60px
 
 .centered
   text-align: center

@@ -85,6 +85,10 @@
         margin: 20px
         position: relative
 
+        a
+          color: $white
+          font-weight: normal
+
         &:hover::before
           right: 0
 
@@ -104,7 +108,11 @@
             right: 0
 
         &.active
-          font-weight: bold
+          a
+            font-weight: bold
 
           &::before
             right: 0
+
+#footer .grid-container
+  align-items: normal
