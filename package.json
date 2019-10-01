@@ -1,7 +1,7 @@
 {
-    "name": "nuvr-orgsync",
+    "name": "nuvr.github.io",
     "version": "1.0.0",
-    "description": "A handful of pug files that can easily be converted into HTML and uploaded to OrgSync",
+    "description": "A handful of pug files that can easily be converted into HTML and uploaded to Engage",
     "scripts": {
         "clean": "rm -rf ./dist",
         "build": "yarn build:sass && yarn build:pug && yarn build:assets",
