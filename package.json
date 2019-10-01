@@ -1,19 +1,19 @@
 {
-  "name": "nuvr-orgsync",
-  "version": "1.0.0",
-  "description": "A handful of jade files that can easily be converted into HTML and uploaded to OrgSync",
-  "scripts": {
-    "clean": "rm -rf ./dist",
-    "build": "yarn build:sass && yarn build:jade && yarn build:assets",
-    "build:sass": "node-sass src/styles/main.sass -o dist/styles --output-style compressed",
-    "build:jade": "node jade",
-    "build:assets": "rm -rf dist/assets && cp -a src/assets/. dist/assets",
-    "deploy": "yarn build && yes | cp -r dist/* ."
-  },
-  "author": "Peter Abbondanzo",
-  "license": "MIT",
-  "devDependencies": {
-    "jade": "^1.11.0",
-    "node-sass": "^4.11.0"
-  }
+    "name": "nuvr-orgsync",
+    "version": "1.0.0",
+    "description": "A handful of pug files that can easily be converted into HTML and uploaded to OrgSync",
+    "scripts": {
+        "clean": "rm -rf ./dist",
+        "build": "yarn build:sass && yarn build:pug && yarn build:assets",
+        "build:sass": "node-sass src/styles/main.sass -o dist/styles --output-style compressed",
+        "build:pug": "node compile",
+        "build:assets": "rm -rf dist/assets && cp -a src/assets/. dist/assets",
+        "deploy": "yarn build && yes | cp -r dist/* ."
+    },
+    "author": "Peter Abbondanzo",
+    "license": "MIT",
+    "devDependencies": {
+        "node-sass": "^4.11.0",
+        "pug": "^2.0.4"
+    }
 }
