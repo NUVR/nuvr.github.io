@@ -13,6 +13,19 @@
 
     &.home
       padding: 40px $container-padding
+      position: relative
+      overflow: hidden
+
+      & *
+        position: relative
+
+      .husky
+        position: absolute
+        pointer-events: none
+        z-index: 0
+        opacity: 0.2
+        top: 0
+        left: 0
 
 
 #container
