@@ -13,7 +13,7 @@
     "author": "Peter Abbondanzo",
     "license": "MIT",
     "devDependencies": {
-        "node-sass": "^4.11.0",
+        "node-sass": "^4.13.1",
         "pug": "^2.0.4"
     }
 }
