@@ -5,7 +5,7 @@ const pug = require('pug');
 const LAYOUTS = path.resolve(__dirname, 'src', 'views');
 console.log(LAYOUTS);
 
-const buildLayouts = () => {
+const buildLayouts = async () => {
     return new Promise(resolve => {
         fs.readdir(LAYOUTS, (err, files) => {
             if (err) throw err;
@@ -16,15 +16,23 @@ const buildLayouts = () => {
         .then(views =>
             views.map(view => {
                 const fileName = path.resolve(LAYOUTS, `${view}.pug`);
-                return { name: view, html: pug.renderFile(fileName, { pretty: true }) };
+                const doctype = view === 'sitemap' ? 'xml' : 'html';
+                return {
+                    name: view,
+                    content: pug.renderFile(fileName, {
+                        pretty: true,
+                        doctype
+                    }),
+                    extension: doctype
+                };
             })
         )
-        .then(html =>
+        .then(pages =>
             Promise.all(
-                html.map(({ name, html }) => {
-                    const fileName = path.resolve('dist', `${name}.html`);
+                pages.map(({ name, content, extension }) => {
+                    const fileName = path.resolve('dist', `${name}.${extension}`);
                     return new Promise(resolve =>
-                        fs.writeFile(fileName, html, err => {
+                        fs.writeFile(fileName, content, err => {
                             if (err) throw err;
                             resolve(name);
                         })
