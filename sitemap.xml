@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://nuvr.github.io/</loc>
+    <priority>1.00</priority>
+    <lastmod>2021-04-04T03:57:47.442Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nuvr.github.io/about</loc>
+    <priority>0.80</priority>
+    <lastmod>2021-04-04T03:57:47.442Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nuvr.github.io/join</loc>
+    <priority>0.80</priority>
+    <lastmod>2021-04-04T03:57:47.442Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nuvr.github.io/privacy-policy</loc>
+    <priority>0.80</priority>
+    <lastmod>2021-04-04T03:57:47.442Z</lastmod>
+  </url>
+</urlset>
