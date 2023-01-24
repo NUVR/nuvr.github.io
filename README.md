@@ -4,4 +4,4 @@ This repository is designed to contain all of the code for our https://nuvr.gith
 
 ## Contributing
 
-The default branch is the `dev` branch since we are limited to GitHub Pages deploys on the [master](https://github.com/NUVR/nuvr.github.io/tree/master) branch. There is a CircleCI configuration that will automatically grab commits from this branch to deploy onto master. All other branches will be ignored.
+The default branch is the `dev` branch. Builds will automatically be published upon a commit to this branch per the `publish` job in our GitHub workflow.
