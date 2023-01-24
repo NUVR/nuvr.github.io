@@ -44,4 +44,7 @@ const buildLayouts = async () => {
 
 buildLayouts()
     .then(files => console.log('Copied files', files))
-    .catch(console.error);
+    .catch((error) => {
+        console.error(error)
+        process.exit(1)
+    });
